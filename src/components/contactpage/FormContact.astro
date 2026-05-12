@@ -1,0 +1,95 @@
+---
+import { Smartphone, Mail, UserRound, ChevronRight } from "@lucide/astro";
+---
+
+<form action="/" class="form" method="POST">
+  <div class="grid gap-4 my-0 grid-cols-1 md:grid-cols-2">
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Full Name</legend>
+      <label class="input validator w-full">
+        <UserRound />
+
+        <input
+          type="text"
+          required
+          placeholder="Enter your name"
+          pattern="[A-Za-z][A-Za-z0-9\-]*"
+          minlength="3"
+          maxlength="30"
+          title="Only letters, numbers or dash"
+          name="contact_name"
+          id="contact-name"
+        />
+      </label>
+      <p class="validator-hint">
+        Must be 3 to 30 characters
+        <br />containing only letters, numbers or dash
+      </p>
+    </fieldset>
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Email</legend>
+      <label class="input validator join-item w-full">
+        <Mail />
+        <input
+          type="email"
+          placeholder="mail@site.com"
+          required
+          name="contact_email"
+          id="contact-email"
+        />
+      </label>
+      <div class="validator-hint hidden">Enter valid email address</div>
+    </fieldset>
+  </div>
+  <div class="grid gap-4 my-0 grid-cols-1 md:grid-cols-2">
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Phone Number</legend>
+      <label class="input validator w-full">
+        <Smartphone />
+        <input
+          type="tel"
+          class="tabular-nums"
+          required
+          placeholder="Enter your number"
+          pattern="[0-9]*"
+          minlength="10"
+          maxlength="10"
+          title="Must be 10 digits"
+          name="contact_tel"
+          id="contact-tel"
+        />
+      </label>
+      <p class="validator-hint">Must be 10 digits</p>
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Subject</legend>
+      <input
+        type="text"
+        class="input w-full"
+        placeholder="Enter your subject"
+        name="contact_subject"
+        id="contact-subject"
+        required
+      />
+    </fieldset>
+  </div>
+
+  <div class="my-0">
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Message</legend>
+      <textarea
+        class="textarea h-24 w-full"
+        placeholder="Type your message...."
+        required
+        name="contact_msg"
+        id="contact-msg"></textarea>
+    </fieldset>
+  </div>
+  <div class="mt-4">
+    <button
+      class="btn btn-main bg-main text-white hover:bg-blue-600 font-normal w-full"
+      type="submit">Send message <ChevronRight size={16} /></button
+    >
+  </div>
+</form>

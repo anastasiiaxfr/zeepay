@@ -1,0 +1,38 @@
+---
+import "../styles/404.css";
+import SEO from "../components/SEO.astro";
+import Logo from "../components/Logo.astro";
+
+interface Props {
+  error: unknown;
+}
+
+const { error } = Astro.props;
+
+const seo = {
+  title: "500",
+  description: "SEO 500 desc",
+  url: "500",
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO title={seo.title} description={seo.description} />
+  </head>
+  <body>
+    <main class="page">
+      <div class="container">
+        <div class="mx-auto flex justify-center mb-3">
+          <Logo />
+        </div>
+        <h1>500</h1>
+        <p>
+          {error instanceof Error ? error.message : "Unknown error"}
+        </p>
+        <a href="/" class="btn">GO TO HOME</a>
+      </div>
+    </main>
+  </body>
+</html>

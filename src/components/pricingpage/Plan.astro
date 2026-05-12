@@ -1,0 +1,289 @@
+---
+import { CircleCheck } from "@lucide/astro";
+---
+
+<section class="section">
+  <div class="container">
+    <div class="max-w-xl mx-auto text-center mb-10">
+      <h1>Flexible plans for everyone</h1>
+      <p class="subtitle">
+        Support small businesses with simple invoicing, powerful integrations,
+        and cash flow management tools.
+      </p>
+    </div>
+
+    <p class="text-center">
+      Get <b class="text-main">50% off</b> on yearly plan 🤩
+    </p>
+
+    <div class="mt-5 grid w-full">
+      <div
+        class="tabs mx-auto justify-center rounded-full border border-black/30 inline-flex mx-auto"
+      >
+        <button class="tab tab-active" data-tab="monthly">Monthly</button>
+        <button class="tab" data-tab="yearly">Yearly</button>
+      </div>
+
+      <!-- Content -->
+      <div class="mt-10 w-full!">
+        <div class="tab-content w-full!" data-content="monthly">
+          <div
+            class="flex flex-wrap lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full"
+          >
+            <article
+              class="bg-custom-light-100 p-6 rounded-xl text-custom-grey-100 w-full grid md:grid-cols-3 lg:grid-cols-1 items-center"
+            >
+              <div>
+                <h2 class="text-lg mb-2">Starter Plan</h2>
+                <div class="flex gap-2 items-end">
+                  <p class="text-3xl text-black font-bold">₹ 10 INR</p>
+                  <small>per month</small>
+                </div>
+                <p class="text-sm mb-4 mt-3">
+                  Individuals and small businesses.
+                </p>
+              </div>
+              <hr
+                class="border-dashed opacity-50 mb-4 block md:hidden ld:block"
+              />
+              <ul class="mb-6 space-y-2 text-xs">
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Real-Time Inventory Tracking
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Automated Purchase Orders
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Mobile Access
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Basic Reporting and Analytics
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Email Support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn-outline w-full rounded-md font-normal border-main text-main hover:bg-main hover:text-white"
+                >Starts 14 days free trial</a
+              >
+            </article>
+
+            <article
+              class="bg-custom-blue-300 p-6 rounded-xl text-white ;lg:scale-110 w-full grid md:grid-cols-3 lg:grid-cols-1 items-center"
+            >
+              <div>
+                <h2 class="text-lg mb-2">Pro Plan</h2>
+                <div class="flex gap-2 items-end">
+                  <p class="text-3xl font-bold">₹ 100 INR</p>
+                  <small class="opacity-80">per month</small>
+                </div>
+                <p class="text-sm mb-4 mt-3">
+                  Individuals and small businesses.
+                </p>
+              </div>
+              <hr
+                class="border-dashed opacity-50 mb-4 block md:hidden ld:block"
+              />
+              <ul class="mb-6 space-y-2 text-xs">
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />What’s in Starter Plan
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Unlimited purchase orders
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Real-time analytics
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Dedicated account manager
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Collaborative team workspace
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />24/7 priority support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn-outline w-full rounded-md font-normal border-main bg-main text-white shadow-none hover:bg-blue-600"
+                >Starts 14 days free trial</a
+              >
+            </article>
+
+            <article
+              class="bg-custom-light-100 p-6 rounded-xl text-custom-grey-100 w-full grid md:grid-cols-3 lg:grid-cols-1 items-center"
+            >
+              <div>
+                <h2 class="text-lg mb-2">Enterprise Plan</h2>
+                <div class="flex gap-2 items-end">
+                  <p class="text-3xl text-black font-bold">₹ 550 INR</p>
+                  <small>per month</small>
+                </div>
+                <p class="text-sm mb-4 mt-3">
+                  Individuals and small businesses.
+                </p>
+              </div>
+              <hr
+                class="border-dashed opacity-50 mb-4 block md:hidden ld:block"
+              />
+              <ul class="mb-6 space-y-2 text-xs">
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Custom API integrations
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Advanced security
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Personalised training sessions
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Custom SLA
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />24/7 priority support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn-outline w-full rounded-md font-normal border-main text-main hover:bg-main hover:text-white"
+                >Starts 14 days free trial</a
+              >
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-content hidden!" data-content="yearly">
+          <div
+            class="flex flex-wrap lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr] gap-10 w-full"
+          >
+            <article
+              class="bg-custom-light-100 p-6 rounded-xl text-custom-grey-100 w-full grid md:grid-cols-3 lg:grid-cols-1 items-center"
+            >
+              <div>
+                <h2 class="text-lg mb-2">Starter Plan</h2>
+                <div class="flex gap-2 items-end">
+                  <p class="text-3xl text-black font-bold">₹ 110 INR</p>
+                  <small>per month</small>
+                </div>
+                <p class="text-sm mb-4 mt-3">
+                  Individuals and small businesses.
+                </p>
+              </div>
+              <hr
+                class="border-dashed opacity-50 mb-4 block md:hidden ld:block"
+              />
+              <ul class="mb-6 space-y-2 text-xs">
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Real-Time Inventory Tracking
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Automated Purchase Orders
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Mobile Access
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Basic Reporting and Analytics
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Email Support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn-outline w-full rounded-md font-normal border-main text-main hover:bg-main hover:text-white"
+                >Starts 14 days free trial</a
+              >
+            </article>
+
+            <article
+              class="bg-custom-blue-300 p-6 rounded-xl text-white ;lg:scale-110 w-full grid md:grid-cols-3 lg:grid-cols-1 items-center"
+            >
+              <div>
+                <h2 class="text-lg mb-2">Pro Plan</h2>
+                <div class="flex gap-2 items-end">
+                  <p class="text-3xl font-bold">₹ 11000 INR</p>
+                  <small class="opacity-80">per month</small>
+                </div>
+                <p class="text-sm mb-4 mt-3">
+                  Individuals and small businesses.
+                </p>
+              </div>
+              <hr
+                class="border-dashed opacity-50 mb-4 block md:hidden ld:block"
+              />
+              <ul class="mb-6 space-y-2 text-xs">
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />What’s in Starter Plan
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Unlimited purchase orders
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Real-time analytics
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Dedicated account manager
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Collaborative team workspace
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />24/7 priority support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn-outline w-full rounded-md font-normal border-main bg-main text-white shadow-none hover:bg-blue-600"
+                >Starts 14 days free trial</a
+              >
+            </article>
+
+            <article
+              class="bg-custom-light-100 p-6 rounded-xl text-custom-grey-100 w-full grid md:grid-cols-3 lg:grid-cols-1 items-center"
+            >
+              <div>
+                <h2 class="text-lg mb-2">Enterprise Plan</h2>
+                <div class="flex gap-2 items-end">
+                  <p class="text-3xl text-black font-bold">₹ 1550 INR</p>
+                  <small>per month</small>
+                </div>
+                <p class="text-sm mb-4 mt-3">
+                  Individuals and small businesses.
+                </p>
+              </div>
+              <hr
+                class="border-dashed opacity-50 mb-4 block md:hidden ld:block"
+              />
+              <ul class="mb-6 space-y-2 text-xs">
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Custom API integrations
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Advanced security
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Personalised training sessions
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />Custom SLA
+                </li>
+                <li class="grid grid-cols-[16px_1fr] items-center gap-1">
+                  <CircleCheck size={16} />24/7 priority support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn-outline w-full rounded-md font-normal border-main text-main hover:bg-main hover:text-white"
+                >Starts 14 days free trial</a
+              >
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

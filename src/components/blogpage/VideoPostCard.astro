@@ -1,0 +1,47 @@
+---
+const { video } = Astro.props;
+import { Image } from "astro:assets";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { CirclePlay } from "@lucide/astro";
+---
+
+<a
+  href={`/video-library/${video.id}/`}
+  class="group grid grdi-cols-1 md:grid-cols-2 gap-4 overflow-hidden rounded-2xl transition bg-custom-light-100 p-4"
+>
+  {
+    video.data.heroImage && (
+      <Image
+        src={video.data.heroImage}
+        alt={video.data.title}
+        width={600}
+        height={340}
+        class="h-52 w-full object-cover rounded-xl"
+      />
+    )
+  }
+
+  <div class="grid">
+    <div class="mb-10">
+      <h3
+        class="h5 mb-3 transition group-hover:text-main group-hover:underline"
+      >
+        {video.data.title}
+      </h3>
+
+      <p class="mt-3 line-clamp-3 text-sm text-custom-grey-100">
+        {video.data.description}
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-between items-center">
+      <p class="text-sm text-black font-semibold flex gap-2 items-center">
+        <CirclePlay class="text-main" />
+        {video.data.watch} min watch
+      </p>
+      <div class="text-xs">
+        <FormattedDate date={video.data.pubDate} />
+      </div>
+    </div>
+  </div>
+</a>

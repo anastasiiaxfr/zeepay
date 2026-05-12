@@ -1,0 +1,63 @@
+---
+import { Mail, ChevronRight, KeyRound } from "@lucide/astro";
+---
+
+<form action="/" class="form grid gap-3" method="POST">
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend">Email</legend>
+    <label class="input validator join-item w-full">
+      <Mail />
+      <input
+        type="email"
+        placeholder="mail@site.com"
+        required
+        name="contact_email"
+        id="contact-email"
+      />
+    </label>
+    <div class="validator-hint hidden">Enter valid email address</div>
+  </fieldset>
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend">Password</legend>
+
+    <label class="input validator w-full">
+      <KeyRound />
+
+      <input
+        type="password"
+        required
+        placeholder="Enter your password"
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+      />
+    </label>
+
+    <div class="validator-hint hidden">
+      Must contain:
+      <br />
+      - 8+ characters
+      <br />
+      - uppercase letter
+      <br />
+      - lowercase letter
+      <br />
+      - number
+    </div>
+  </fieldset>
+  <div class="flex flex-wrap justify-between items-center gap-4">
+    <fieldset class="fieldset">
+      <label class="label">
+        <input type="checkbox" checked="checked" class="checkbox" />
+        Remember me
+      </label>
+    </fieldset>
+    <a href="#" class="hover:underline">Forgot Password</a>
+  </div>
+  <div class="mt-4">
+    <button
+      class="btn btn-main bg-main text-white hover:bg-blue-600 font-normal w-full"
+      type="submit">Send message <ChevronRight size={16} /></button
+    >
+  </div>
+</form>

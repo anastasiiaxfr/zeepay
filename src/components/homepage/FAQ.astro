@@ -1,0 +1,75 @@
+---
+import { ChevronRight } from "@lucide/astro";
+---
+
+<section class="section section-faq">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="h3">Frequently asked questions</h2>
+        <p class="text-base opacity-80 mb-8">
+          Find quick solutions and helpful tips for using Zeepay. We’ve compiled
+          answers to the most frequently asked questions right here.
+        </p>
+        <a
+          href="/contact"
+          class="btn btn-lg w-full sm:w-auto rounded-md bg-main hover:bg-blue-600 border-main text-white font-light"
+        >
+          Contact support
+          <ChevronRight size="14" />
+        </a>
+      </div>
+      <div class="grid gap-3">
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title font-semibold">What is Zeepay?</div>
+          <div class="collapse-content text-sm">
+            Zeepay is a secure, user-friendly online payment app that allows
+            users to send and receive money, pay bills, and manage transactions
+            effortlessly.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            How do I sign up for Zeepay?
+          </div>
+          <div class="collapse-content text-sm">
+            Click on "Forgot Password" on the login page and follow the
+            instructions sent to your email.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">Is Zeepay safe to use?</div>
+          <div class="collapse-content text-sm">
+            Go to "My Account" settings and select "Edit Profile" to make
+            changes.
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            What payment methods does Zeepay support?
+          </div>
+          <div class="collapse-content text-sm">
+            Go to "My Account" settings and select "Edit Profile" to make
+            changes.
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold">
+            Can I pay bills using Zeepay?
+          </div>
+          <div class="collapse-content text-sm">
+            Go to "My Account" settings and select "Edit Profile" to make
+            changes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

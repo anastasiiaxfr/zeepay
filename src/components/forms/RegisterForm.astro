@@ -1,0 +1,105 @@
+---
+import { Mail, ChevronRight, KeyRound, UserRound } from "@lucide/astro";
+---
+
+<form action="/" class="form grid gap-3" method="POST">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Full Name</legend>
+      <label class="input validator w-full">
+        <UserRound />
+
+        <input
+          type="text"
+          required
+          placeholder="Enter your name"
+          pattern="[A-Za-z][A-Za-z0-9\-]*"
+          minlength="3"
+          maxlength="30"
+          title="Only letters, numbers or dash"
+          name="contact_name"
+          id="contact-name"
+        />
+      </label>
+      <p class="validator-hint">
+        Must be 3 to 30 characters
+        <br />containing only letters, numbers or dash
+      </p>
+    </fieldset>
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Email</legend>
+      <label class="input validator join-item w-full">
+        <Mail />
+        <input
+          type="email"
+          placeholder="mail@site.com"
+          required
+          name="contact_email"
+          id="contact-email"
+        />
+      </label>
+      <div class="validator-hint hidden">Enter valid email address</div>
+    </fieldset>
+  </div>
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend">Password</legend>
+
+    <label class="input validator w-full">
+      <KeyRound />
+
+      <input
+        type="password"
+        required
+        placeholder="Enter your password"
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+      />
+    </label>
+
+    <div class="validator-hint hidden">
+      Must contain:
+      <br />
+      - 8+ characters
+      <br />
+      - uppercase letter
+      <br />
+      - lowercase letter
+      <br />
+      - number
+    </div>
+  </fieldset>
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend">Repeat Password</legend>
+
+    <label class="input validator w-full">
+      <KeyRound />
+
+      <input
+        type="password"
+        required
+        placeholder="Repeat your password"
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+      />
+    </label>
+
+    <div class="validator-hint hidden">Passwords mismatch</div>
+  </fieldset>
+  <div class="flex flex-wrap justify-between items-center gap-4">
+    <fieldset class="fieldset">
+      <label class="label">
+        <input type="checkbox" checked="checked" class="checkbox" />
+        Remember me
+      </label>
+    </fieldset>
+    <a href="#" class="hover:underline">Forgot Password</a>
+  </div>
+  <div class="mt-4">
+    <button
+      class="btn btn-main bg-main text-white hover:bg-blue-600 font-normal w-full"
+      type="submit">Sign up<ChevronRight size={16} /></button
+    >
+  </div>
+</form>
