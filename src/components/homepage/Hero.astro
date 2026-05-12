@@ -1,0 +1,87 @@
+---
+import { ChevronRight } from "@lucide/astro";
+---
+
+<section class="section section-hero">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div class="text-center md:text-left">
+        <h1>Early pay, Automatic savings, Transform your money habits</h1>
+        <p class="subtitle">
+          Support small businesses with simple invoicing, powerful integrations,
+          and cash flow management tools.
+        </p>
+        <div
+          class="flex gap-3 item-center justify-center flex-wrap mt-8 mx-auto md:justify-start"
+        >
+          <a
+            href="/signup"
+            class="btn btn-lg w-full sm:w-auto rounded-md bg-main hover:bg-blue-600 border-main text-white font-light"
+          >
+            Get started
+            <ChevronRight size="14" />
+          </a>
+          <a
+            href="#"
+            class="btn btn-lg w-full sm:w-auto rounded-md bg-white text-main font-light"
+          >
+            Learn more
+            <ChevronRight size="14" />
+          </a>
+        </div>
+
+        <div class="mt-8 sm:mt-20">
+          <p>
+            Trusted by <b class="text-main">500+</b> Companies
+          </p>
+          <div
+            class="flex flex-wrap gap-2 items-center mt-4 justify-center md:justify-start"
+          >
+            <img
+              src="/img/brands/b1.png"
+              alt="Brand 1"
+              class="h-15 w-auto"
+              fetchpriority="high"
+			  width="136"
+			  height="72"
+            />
+            <img
+              src="/img/brands/b2.png"
+              alt="Brand 2"
+              class="h-15 w-auto"
+              fetchpriority="high"
+			  width="136"
+			  height="72"
+            />
+            <img
+              src="/img/brands/b3.png"
+              alt="Brand 3"
+              class="h-15 w-auto"
+              fetchpriority="high"
+			  width="136"
+			  height="72"
+            />
+            <img
+              src="/img/brands/b4.png"
+              alt="Brand 4"
+              class="h-15 w-auto"
+              fetchpriority="high"
+			  width="136"
+			  height="72"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="-mb-20 mt-auto">
+        <img
+          src="/img/home/img1.webp"
+          alt="Hero Image"
+          class="w-full h-auto mx-auto"
+          fetchpriority="high"
+		  width="560"
+		  height="646"
+		  />
+      </div>
+    </div>
+  </div>
+</section>

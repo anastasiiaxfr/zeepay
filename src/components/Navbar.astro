@@ -1,0 +1,17 @@
+---
+import { NAV_MENU } from "../consts";
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<div class="hidden flex-none lg:block mx-auto">
+  <ul class="menu menu-horizontal gap-x-4">
+    <!-- Navbar menu content here -->
+    {
+      NAV_MENU.map((item) => (
+        <li>
+          <HeaderLink item={item} />
+        </li>
+      ))
+    }
+  </ul>
+</div>

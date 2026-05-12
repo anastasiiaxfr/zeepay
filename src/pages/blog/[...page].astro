@@ -1,0 +1,87 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../../layouts/Main.astro";
+import BannerCTA from "../../components/blogpage/BannerCTA.astro";
+import BlogCard from "../../components/blogpage/BlogCard.astro";
+import BlogVideoPosts from "../../components/blogpage/BlogVideoPosts.astro";
+import Subscribe from "../../components/blogpage/Subscribe.astro";
+import { ArrowRight, ArrowLeft } from "@lucide/astro";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  );
+
+  return paginate(posts, { pageSize: 4 });
+}
+
+const { page } = Astro.props;
+
+const totalPages = Math.ceil(page.total / page.size);
+---
+
+<Layout
+  title="All Blogs"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date("August 08 2021")}
+>
+  <div class="container py-12">
+    <div class="max-w-lg text-center mx-auto mb-10">
+      <h1 class="h2">Discover our latest Articles</h1>
+      <p class="subtitle">
+        Your go-to resource for insights, tips, and the latest updates in the
+        world of accounting and financial management.
+      </p>
+    </div>
+
+    <section class="section">
+      <p class="mb-2 text-sm opacity-70 hidden">
+        <em>
+          Posts {page.start + 1} - {page.end + 1} of {page.total}
+        </em>
+      </p>
+
+      <ul class="grid gap-10 mb-10">
+        {
+          page.data.map((post) => (
+            <li>
+              <BlogCard post={post} />
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="pagination flex flex-wrap items-center gap-3">
+        {
+          page.url.prev && (
+            <a
+              href={page.url.prev}
+              class="pagination-btn flex gap-2 items-center btn"
+            >
+              <ArrowLeft /> Previous
+            </a>
+          )
+        }
+
+        <span class="pagination-current">
+          Page {page.currentPage} of {totalPages}
+        </span>
+
+        {
+          page.url.next && (
+            <a
+              href={page.url.next}
+              class="pagination-btn flex gap-2 items-center btn"
+            >
+              Next <ArrowRight />
+            </a>
+          )
+        }
+      </div>
+    </section>
+    <BannerCTA />
+    <BlogVideoPosts />
+    <Subscribe />
+  </div>
+</Layout>

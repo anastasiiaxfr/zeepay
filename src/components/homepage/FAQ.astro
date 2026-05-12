@@ -1,0 +1,126 @@
+---
+import { ChevronRight } from "@lucide/astro";
+---
+
+<section class="section section-faq">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="h3">Frequently asked questions</h2>
+
+        <p class="text-base text-custom-grey-100 mb-8">
+          Find quick solutions and helpful tips for using Zeepay. We’ve compiled
+          answers to the most frequently asked questions right here.
+        </p>
+
+        <a
+          href="/contact"
+          class="btn btn-lg w-full sm:w-auto rounded-md bg-main hover:bg-blue-600 border-main text-white font-light"
+        >
+          Contact support
+          <ChevronRight size="14" />
+        </a>
+      </div>
+
+      <div class="grid gap-3">
+        <!-- Item -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input
+            type="radio"
+            name="faq-accordion"
+            checked="checked"
+            aria-hidden="true"
+            tabindex="-1"
+          />
+
+          <div class="collapse-title font-semibold">
+            What is Zeepay?
+          </div>
+
+          <div class="collapse-content text-sm">
+            Zeepay is a secure, user-friendly online payment app that allows
+            users to send and receive money, pay bills, and manage transactions
+            effortlessly.
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input
+            type="radio"
+            name="faq-accordion"
+            aria-hidden="true"
+            tabindex="-1"
+          />
+
+          <div class="collapse-title font-semibold">
+            How do I sign up for Zeepay?
+          </div>
+
+          <div class="collapse-content text-sm">
+            Download the app or visit the website, then click “Sign Up” and
+            follow the registration process.
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input
+            type="radio"
+            name="faq-accordion"
+            aria-hidden="true"
+            tabindex="-1"
+          />
+
+          <div class="collapse-title font-semibold">
+            Is Zeepay safe to use?
+          </div>
+
+          <div class="collapse-content text-sm">
+            Yes. Zeepay uses encryption, secure authentication, and fraud
+            protection measures to keep your transactions and personal data
+            safe.
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input
+            type="radio"
+            name="faq-accordion"
+            aria-hidden="true"
+            tabindex="-1"
+          />
+
+          <div class="collapse-title font-semibold">
+            What payment methods does Zeepay support?
+          </div>
+
+          <div class="collapse-content text-sm">
+            Zeepay supports bank cards, mobile wallets, bank transfers, and
+            other popular payment methods depending on your region.
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input
+            type="radio"
+            name="faq-accordion"
+            aria-hidden="true"
+            tabindex="-1"
+          />
+
+          <div class="collapse-title font-semibold">
+            Can I pay bills using Zeepay?
+          </div>
+
+          <div class="collapse-content text-sm">
+            Yes. You can pay utility bills, subscriptions, and other services
+            directly through the Zeepay app.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

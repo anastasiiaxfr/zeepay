@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Main.astro";
+import CTA from "../components/homepage/CTA.astro";
+import Review from "../components/homepage/Review.astro";
+import Plan from "../components/pricingpage/Plan.astro";
+import Brands from "../components/pricingpage/Brands.astro";
+import Table from "../components/pricingpage/Table.astro";
+---
+
+<Layout
+  title="Pricing"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date("August 08 2021")}
+>
+  <Plan />
+  <Brands />
+  <Table />
+
+  <Review />
+  <CTA />
+</Layout>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll("[data-tab]");
+    const contents = document.querySelectorAll("[data-content]");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.tab;
+
+        // active tab
+        tabs.forEach((t) => t.classList.remove("tab-active"));
+        tab.classList.add("tab-active");
+
+        // switch content
+        contents.forEach((c) => {
+          c.classList.toggle("hidden!", c.dataset.content !== target);
+        });
+      });
+    });
+  });
+</script>

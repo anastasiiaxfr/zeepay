@@ -1,0 +1,33 @@
+---
+import SEO from "../components/SEO.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Drawer from "../components/Drawer.astro";
+import SVG from "../components/SVG.astro";
+
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <div class="drawer min-h-screen">
+      <input id="my-drawer-2" type="checkbox" class="drawer-toggle"  title="Toggle navigation menu"/>  <label for="my-drawer-2" class="sr-only">
+    Toggle navigation menu
+  </label>
+      <div class="drawer-content flex flex-col min-h-screen">
+       <main class="min-h-screen">
+         <Header />
+        <slot />
+       </main>
+        <Footer />
+        <SVG />
+      </div>
+      <Drawer />
+    </div>
+
+  </body>
+</html>

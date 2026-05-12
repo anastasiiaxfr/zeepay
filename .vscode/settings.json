@@ -1,0 +1,15 @@
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  "tailwindCSS.includeLanguages": {
+    "astro": "html",
+    "javascript": "javascript",
+    "typescript": "typescript"
+  },
+
+  "tailwindCSS.emmetCompletions": true,
+
+  "editor.suggest.showWords": true
+}

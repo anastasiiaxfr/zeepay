@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import FormattedDate from "../../components/FormattedDate.astro";
+const { post } = Astro.props;
+---
+
+<a
+  href={`/blog/${post.id}/`}
+  class="card group grid grid-cols-1 md:grid-cols-[1fr_2fr] lg:grid-cols-2 gap-8 bg-custom-light-100 p-6 rounded-xl"
+>
+  {
+    post.data?.heroImage && (
+      <Image
+        src={post.data.heroImage}
+        alt={post.data.title}
+        width={720}
+        height={360}
+        class="image rounded-xl aspect-2/1 md:aspect-square lg:aspect-2/1 w-full object-cover"
+      />
+    )
+  }
+
+  <div class="grid justify-start">
+    <div>
+      {
+        post.data?.category && (
+          <span class="inline-block px-4 py-2 rounded bg-white border border-main mb-4 mr-auto text-sm text-main">
+            {post.data?.category}
+          </span>
+        )
+      }
+      <h3 class="h4 mb-3 group-hover:text-main group-hover:underline">
+        {post.data?.title}
+      </h3>
+      <p class="mb-10 text-custom-grey-100 text-sm sm:text-base">
+        {post.data?.description}
+      </p>
+    </div>
+
+    <div class="mt-auto grid grid-cols-[44px_1fr] gap-3 items-center">
+      <div class="rounded-full overflow-hidden bg-main text-white">
+        <img src="/img/logo-icon.svg" alt="" class="object-cover w-full" />
+      </div>
+      <div>
+        <b>Team Zeepay</b>
+        <p class="text-sm text-custom-grey-100">
+          <FormattedDate date={post.data.pubDate} />
+        </p>
+      </div>
+    </div>
+  </div>
+</a>

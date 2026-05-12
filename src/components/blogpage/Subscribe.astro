@@ -1,0 +1,43 @@
+---
+import { Mail, ChevronRight, KeyRound, UserRound } from "@lucide/astro";
+---
+
+<section class="section">
+  <div class="container">
+    <div
+      class="bg-custom-blue-300 bg-[url('/img/bg/subscribe-cta.svg')] bg-no-repeat bg-cover text-white rounded-2xl p-6 sm:p-10 lg:p-20 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-center"
+    >
+      <div>
+        <h2 class="h3">Sign up for newsletter</h2>
+        <p class="opcity-80">
+          Get exclusive tips and updates on payment solutions delivered straight
+          to your inbox.
+        </p>
+      </div>
+      <div>
+        <form action="#" class="form-subscri" method="POS
+        T">
+          <div class="flex flex-wrap gap-3 items-center">
+            <fieldset class="fieldset flex-1">
+              <label class="input validator join-item w-full">
+                <Mail class="text-black" />
+                <input
+                  type="email"
+                  placeholder="mail@site.com"
+                  required
+                  name="contact_email"
+                  id="contact-email"
+                  class="text-black"
+                />
+              </label>
+            </fieldset>
+            <button
+              class="btn btn-main bg-main text-white border-blue-600 hover:bg-blue-600 font-normal w-full sm:w-auto shadow-none"
+              type="submit">Sign up<ChevronRight size={16} /></button
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

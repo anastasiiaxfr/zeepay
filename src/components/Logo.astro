@@ -1,0 +1,12 @@
+---
+import { SITE_TITLE, LOGO_ICON } from "../consts";
+---
+
+<a href="/" class="logo">
+  {
+    LOGO_ICON && (
+      <img src={LOGO_ICON} alt="logo" class="w-8 h-8" fetchpriority="high" width="36" height="36" />
+    )
+  }
+  {SITE_TITLE}
+</a>

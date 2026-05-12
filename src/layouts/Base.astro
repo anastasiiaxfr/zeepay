@@ -1,0 +1,19 @@
+---
+import SEO from "../components/SEO.astro";
+
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-white">
+    <div class="min-h-screen">
+      <main class="min-h-screen">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

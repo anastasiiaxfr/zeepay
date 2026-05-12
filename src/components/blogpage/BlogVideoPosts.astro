@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import VideoPostCard from "./VideoPostCard.astro";
+
+const videos = (await getCollection("videoLibrary"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 4);
+---
+
+<section class="section">
+  <div class="container">
+    <div class="mb-6 flex items-center justify-between gap-4">
+      <div>
+        <h2>Zeepay video library</h2>
+      </div>
+
+      <a href="/video-library" class="btn btn-outline hidden md:inline-flex">
+        View all videos
+      </a>
+    </div>
+
+    <ul class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:grid-cols-2">
+      {
+        videos.map((video) => (
+          <li>
+            <VideoPostCard video={video} />
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-8 text-center md:hidden">
+      <a href="/video-library" class="btn btn-outline w-full">
+        View all videos
+      </a>
+    </div>
+  </div>
+</section>

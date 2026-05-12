@@ -1,0 +1,30 @@
+---
+import "../styles/404.css";
+import SEO from "../components/SEO.astro";
+import Logo from "../components/Logo.astro";
+
+const seo = {
+  title: "404",
+  description: "SEO 404 desc",
+  url: "404",
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO title={seo.title} description={seo.description} />
+  </head>
+  <body>
+    <main class="page">
+      <div class="container">
+        <div class="mx-auto flex justify-center mb-3">
+          <Logo />
+        </div>
+        <h1>404</h1>
+        <p>Sorry, we couldn't fint that page</p>
+        <a href="/" class="btn">GO TO HOME</a>
+      </div>
+    </main>
+  </body>
+</html>
