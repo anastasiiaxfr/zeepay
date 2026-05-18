@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <section class="section section-features">
@@ -16,12 +16,14 @@
       <div>
         <article class="bg-custom-blue-100 rounded-2xl p-10 text-center">
           <div>
-            <img
+            <Image
+              width={500}
+              height={260}
               src="/img/home/img2.webp"
               alt=""
-              width="500"
-              height="260"
               class="w-auto h-auto mx-auto"
+              format="webp"
+              quality={80}
             />
           </div>
           <div class="">
@@ -100,12 +102,14 @@
       <div class="order-1">
         <article class="bg-custom-blue-100 rounded-2xl p-10 text-center">
           <div>
-            <img
+            <Image
+              width={422}
+              height={242}
               src="/img/home/img3.webp"
               alt=""
-              width="422"
-              height="242"
               class="w-auto h-auto mx-auto"
+              format="webp"
+              quality={100}
             />
           </div>
           <div class="">

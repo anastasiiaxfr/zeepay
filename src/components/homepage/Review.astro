@@ -2,6 +2,7 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Image } from "astro:assets";
 ---
 
 <section class="section section-review">
@@ -31,10 +32,14 @@ import "swiper/css/pagination";
               and I love the easy interface that keeps everything organized."
             </p>
             <div class="flex flex-wrap gap-2 items-center justify-center mt-4">
-              <img
+              <Image
+                width={50}
+                height={450}
                 src="/img/comments/ava1.png"
                 alt=""
                 class="rounded-full w-10 h-10 object-cover"
+                format="webp"
+                quality={80}
               />
               <div class="flex flex-wrap gap-1">
                 <b>Priya K.,</b>

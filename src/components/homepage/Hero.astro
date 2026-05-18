@@ -1,5 +1,6 @@
 ---
 import { ChevronRight } from "@lucide/astro";
+import { Image } from "astro:assets";
 ---
 
 <section class="section section-hero">
@@ -42,45 +43,55 @@ import { ChevronRight } from "@lucide/astro";
               alt="Brand 1"
               class="h-15 w-auto"
               fetchpriority="high"
-			  width="136"
-			  height="72"
+              width="136"
+              height="72"
             />
             <img
               src="/img/brands/b2.png"
               alt="Brand 2"
               class="h-15 w-auto"
               fetchpriority="high"
-			  width="136"
-			  height="72"
+              width="136"
+              height="72"
             />
             <img
               src="/img/brands/b3.png"
               alt="Brand 3"
               class="h-15 w-auto"
               fetchpriority="high"
-			  width="136"
-			  height="72"
+              width="136"
+              height="72"
             />
             <img
               src="/img/brands/b4.png"
               alt="Brand 4"
               class="h-15 w-auto"
               fetchpriority="high"
-			  width="136"
-			  height="72"
+              width="136"
+              height="72"
             />
           </div>
         </div>
       </div>
       <div class="-mb-20 mt-auto">
-        <img
+        <!-- <img
           src="/img/home/img1.webp"
           alt="Hero Image"
           class="w-full h-auto mx-auto"
           fetchpriority="high"
 		  width="560"
 		  height="646"
-		  />
+		  /> -->
+        <Image
+          width={560}
+          height={646}
+          src="/img/home/img1.webp"
+          alt="Hero Image"
+          class="w-full h-auto mx-auto"
+          format="webp"
+          quality={80}
+          fetchpriority="high"
+        />
       </div>
     </div>
   </div>

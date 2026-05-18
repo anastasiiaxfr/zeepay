@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <section class="section section-how-works">
@@ -9,12 +9,14 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <article>
         <div class="mb-8">
-          <img
+          <Image
+            width={600}
+            height={450}
             src="/img/home/pic1.webp"
             alt=""
             class="aspect-ratio-1/1 rounded-lg"
-            width="600"
-            height="450"
+            format="webp"
+            quality={80}
           />
         </div>
         <div>
@@ -32,12 +34,14 @@
 
       <article>
         <div class="mb-8">
-          <img
+          <Image
+            width={600}
+            height={450}
             src="/img/home/pic2.webp"
             alt=""
             class="aspect-ratio-1/1 rounded-lg"
-            width="600"
-            height="450"
+            format="webp"
+            quality={80}
           />
         </div>
         <div>
@@ -55,12 +59,14 @@
 
       <article>
         <div class="mb-8">
-          <img
+          <Image
+            width={600}
+            height={450}
             src="/img/home/pic3.webp"
             alt=""
-            class="aspect-ratio-1/1 rounded-lg w-full"
-            width="600"
-            height="450"
+            class="aspect-ratio-1/1 rounded-lg"
+            format="webp"
+            quality={80}
           />
         </div>
         <div>
