@@ -5,18 +5,17 @@
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --color-main: #2667FF;
-  --color-custom-blue-100: #EBF1FF;
-  --color-custom-blue-200: #2667FF;
-  --color-custom-blue-300: #001A57;
-  --color-custom-light-100: #F8FAFC;
-  --color-custom-grey-100: #64748B;
-
-  
+  --color-main: #2667ff;
+  --color-custom-blue-100: #ebf1ff;
+  --color-custom-blue-200: #2667ff;
+  --color-custom-blue-300: #001a57;
+  --color-custom-light-100: #f8fafc;
+  --color-custom-grey-100: #64748b;
 }
 
 @layer base {
-  h1, .h1 {
+  h1,
+  .h1 {
     @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6;
   }
 
@@ -66,16 +65,14 @@ body {
   @apply my-0 py-20 bg-custom-blue-100 bg-[url('/img/bg/bg1.svg')] bg-no-repeat bg-[position:70%_bottom];
 }
 
-.section-how-works, .section-faq {
+.section-how-works,
+.section-faq {
   @apply my-0 py-20 bg-custom-light-100;
 }
-
 
 .section-cta {
   @apply my-0 py-20 bg-custom-blue-100 bg-[url('/img/bg/bg2.svg')] bg-no-repeat bg-cover bg-[position:50%_bottom] text-white;
 }
-
-
 
 #reviewSwiper .swiper-slide {
   opacity: 0.4;
@@ -90,7 +87,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  #reviewSwiper .swiper-slide-active+* {
+  #reviewSwiper .swiper-slide-active + * {
     @apply bg-custom-light-100 opacity-100 z-10;
   }
 }
@@ -98,7 +95,6 @@ body {
 #reviewSwiper .swiper-pagination {
   @apply !relative mt-10;
 }
-
 
 .tab-content {
   @apply block;
@@ -117,12 +113,14 @@ body {
 }
 
 .validator {
-    &:user-invalid, &:has(:user-invalid), &[aria-invalid]:not([aria-invalid="false"]), &:has([aria-invalid]:not([aria-invalid="false"])) {
-        & ~ .validator-hint {
-            visibility: visible;
-            height: auto;
-            display: block;
-        }
+  &:user-invalid,
+  &:has(:user-invalid),
+  &[aria-invalid]:not([aria-invalid="false"]),
+  &:has([aria-invalid]:not([aria-invalid="false"])) {
+    & ~ .validator-hint {
+      visibility: visible;
+      height: auto;
+      display: block;
     }
+  }
 }
-

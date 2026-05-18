@@ -1,99 +1,74 @@
 ---
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
-import SEO from "../components/SEO.astro";
-import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import Header from "../components/Header.astro";
+import "../styles/blog-post.css";
+
+import Layout from "./Main.astro";
+import Subscribe from '../components/blogpage/Subscribe.astro';
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category } =
+  Astro.props;
+
+import { ArrowLeft } from "@lucide/astro";
 ---
 
-<html lang="en">
-  <head>
-    <SEO title={title} description={description} image={heroImage} />
-    <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
-      }
-      .hero-image {
-        width: 100%;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
-  </head>
-
-  <body>
-    <Header />
-    <main>
-      <article>
-        <div class="title max-w-6xl mx-auto">
-          <div class="mx-auto max-w-5xl">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1 class="">{title}</h1>
-          </div>
-
-          <div class="hero-image">
+<Layout title={title} description={description} image={heroImage}>
+  <div class="container py-10 post">
+    <article>
+      <div class="title max-w-6xl mx-auto">
+        <div class="mx-auto max-w-5xl text-center">
+          <div class="date">
+            <FormattedDate date={pubDate} />
             {
-              heroImage && (
-                <Image
-                  width={1020}
-                  height={510}
-                  src={heroImage}
-                  alt=""
-                  class="aspect-2/1 object-cover w-full max-w-7xl"
-                />
+              updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={updatedDate} />
+                </div>
               )
             }
           </div>
-          <hr />
+          <h1 class="">{title}</h1>
         </div>
-        <div class="prose">
-          <slot />
+
+        <div class="hero-image mt-8">
+          {
+            heroImage && (
+              <Image
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt=""
+                class="aspect-2/1 object-cover w-full! h-auto max-w-7xl rounded-2xl"
+              />
+            )
+          }
         </div>
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+		<div class="flex flex-wrap gap-4 justify-between items-center mb-10 mt-4">
+			<a href="../" class="flex gap-2 items-centermt-8 order-2 md:order-1"> <ArrowLeft /> Back to Blog</a>
+		 <div class="mt-auto grid grid-cols-[44px_1fr] gap-3 items-center order-1 md:order-2">
+          <div class="rounded-full overflow-hidden bg-main text-white mv">
+            <img src="/img/logo-icon.svg" alt="" class="object-cover w-full" />
+          </div>
+          <div>
+            <b>Team Zeepay</b>
+            <p class="text-sm text-custom-grey-100 my-1!">
+              Category: {category}
+            </p>
+          </div>
+        </div>
+		</div>
+       
+
+      </div>
+      <div class="max-w-4xl mx-auto">
+        <slot />
+
+        <a href="../" class="btn mt-8"> <ArrowLeft /> Back to Blog</a>
+		<Subscribe>
+      </div>
+    </article>
+  </div>
+</Layout>

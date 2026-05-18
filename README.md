@@ -1,19 +1,52 @@
-# Astro Starter Kit: Blog
+> ⭐️ Love this theme? Star it to support our work!
 
-```sh
-npm create astro@latest -- --template blog
-```
+# Zeepay Starter: Financial Website Template
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+A high-performance website starter template built for financial teams to launch new brands, products, or campaigns quickly and efficiently.
+
+> ⚡ Built with Astro 6, Tailwind CSS 4, and Markdown — optimized for performance, SEO, and simplicity.
+
+![Financial Template Preview](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/og-1200x630.jpg)
+
+This template is powered by a modern, headless stack: Astro, Tailwind, Daisy UI, Vercel. Together, they provide a flexible, scalable solution with intuitive content management and powerful marketing features like A/B testing.
+
+## Demo
+
+- ✨ [Live Demo](https://zeepay-lyart.vercel.app/)
+- 💨 [PageSpeed Insights Report](https://pagespeed.web.dev/analysis/https-zeepay-lyart-vercel-app/1q51dx21j5?form_factor=desktop)
+- [Sitemap.xml](https://zeepay-lyart.vercel.app/sitemap-index.xml)
+- [Robots.txt](https://zeepay-lyart.vercel.app/robots.txt)
+- [Schema.org validator](https://search.google.com/test/rich-results/result?id=3nVnmyjOUAPsCPLxHaiebg)
 
 Features:
 
 - ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
+- ✅ 90+/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and meta tags, Open Graph data, JSON-LD schema and PWA
+- ✅ Sitemap, robots.txt support
 - ✅ Markdown & MDX support
+- ✅ Fully responsive and accessible
+- ✅ Easily deploy to Vercel, Netlify, or Cloudflare Pages
+
+Pages:
+
+- home
+- pricing
+- contacts
+- blog
+- blog detail
+- login
+- register
+- 404 / 500
+
+## PWA support
+
+![pwa](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/3.jpg)
+
+## Google pages speed
+
+![mobile](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/1.jpg)
+![desktop](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/2.jpg)
 
 ## 🚀 Project Structure
 
@@ -27,19 +60,12 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── content/
 │   ├── layouts/
 │   └── pages/
+│   └── styles/
 ├── astro.config.mjs
 ├── README.md
 ├── package.json
 └── tsconfig.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -58,6 +84,8 @@ All commands are run from the root of the project, from a terminal:
 
 Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-## Credit
+## 🛠 Credits
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Made with ❤️ by [anastasiiaxfr](https://github.com/anastasiiaxfr/zeepay)
+
+ZeePay is inspired by the premium [Zeepay Pro Theme](https://www.figma.com/community/file/1468500427434987593/stackz-zeepay-fintech-website-template-free)

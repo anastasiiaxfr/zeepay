@@ -1,16 +1,63 @@
 ---
 import { ChevronRight } from "@lucide/astro";
+
+const faqs = [
+  {
+    question: "What is Zeepay?",
+    answer:
+      "Zeepay is a secure, user-friendly online payment app that allows users to send and receive money, pay bills, and manage transactions effortlessly.",
+  },
+  {
+    question: "How do I sign up for Zeepay?",
+    answer:
+      "Download the app or visit the website, then click “Sign Up” and follow the registration process.",
+  },
+  {
+    question: "Is Zeepay safe to use?",
+    answer:
+      "Yes. Zeepay uses encryption, secure authentication, and fraud protection measures to keep your transactions and personal data safe.",
+  },
+  {
+    question: "What payment methods does Zeepay support?",
+    answer:
+      "Zeepay supports bank cards, mobile wallets, bank transfers, and other popular payment methods depending on your region.",
+  },
+  {
+    question: "Can I pay bills using Zeepay?",
+    answer:
+      "Yes. You can pay utility bills, subscriptions, and other services directly through the Zeepay app.",
+  },
+];
+
+// FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 ---
+
+<!-- FAQ JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <section class="section section-faq">
   <div class="container">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <div>
         <h2 class="h3">Frequently asked questions</h2>
-        <p class="text-base opacity-80 mb-8">
+
+        <p class="text-base text-custom-grey-100 mb-8">
           Find quick solutions and helpful tips for using Zeepay. We’ve compiled
           answers to the most frequently asked questions right here.
         </p>
+
         <a
           href="/contact"
           class="btn btn-lg w-full sm:w-auto rounded-md bg-main hover:bg-blue-600 border-main text-white font-light"
@@ -19,56 +66,25 @@ import { ChevronRight } from "@lucide/astro";
           <ChevronRight size="14" />
         </a>
       </div>
+
       <div class="grid gap-3">
-        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordion-2" checked="checked" />
-          <div class="collapse-title font-semibold">What is Zeepay?</div>
-          <div class="collapse-content text-sm">
-            Zeepay is a secure, user-friendly online payment app that allows
-            users to send and receive money, pay bills, and manage transactions
-            effortlessly.
-          </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title font-semibold">
-            How do I sign up for Zeepay?
-          </div>
-          <div class="collapse-content text-sm">
-            Click on "Forgot Password" on the login page and follow the
-            instructions sent to your email.
-          </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title font-semibold">Is Zeepay safe to use?</div>
-          <div class="collapse-content text-sm">
-            Go to "My Account" settings and select "Edit Profile" to make
-            changes.
-          </div>
-        </div>
+        {
+          faqs.map((faq, index) => (
+            <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+              <input
+                type="radio"
+                name="faq-accordion"
+                checked={index === 0}
+                aria-hidden="true"
+                tabindex="-1"
+              />
 
-        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title font-semibold">
-            What payment methods does Zeepay support?
-          </div>
-          <div class="collapse-content text-sm">
-            Go to "My Account" settings and select "Edit Profile" to make
-            changes.
-          </div>
-        </div>
+              <div class="collapse-title font-semibold">{faq.question}</div>
 
-        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title font-semibold">
-            Can I pay bills using Zeepay?
-          </div>
-          <div class="collapse-content text-sm">
-            Go to "My Account" settings and select "Edit Profile" to make
-            changes.
-          </div>
-        </div>
+              <div class="collapse-content text-sm">{faq.answer}</div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>

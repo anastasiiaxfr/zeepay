@@ -53,3 +53,41 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- JSON-LD Structured Data -->
+<script async type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "ZeePay Fintech",
+    "brand": "ZeePay Fintech",
+    "alternateName": "ZeePay",
+    "url": "https://zeepay-lyart.vercel.app",
+    "logo": "/favicon/android-chrome-512x512.png",
+    "description": "ZeePay Fintech provides secure digital payment and fintech solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "L.K. Road",
+      "addressLocality": "Vashi",
+      "addressRegion": "Maharashtra",
+      "postalCode": "410200",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+444572008200",
+        "email": "info@zeepay.com",
+        "contactType": "customer support",
+        "areaServed": "EN",
+        "availableLanguage": ["Englishn"]
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/zeepay",
+      "https://x.com/zeepay",
+      "https://facebook.com/zeepay",
+      "https://github.com/anastasiiaxfr/zeepay"
+    ]
+  }
+</script>
