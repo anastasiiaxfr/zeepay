@@ -5,7 +5,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 import "../styles/blog-post.css";
 
 import Layout from "./Main.astro";
-import Subscribe from '../components/blogpage/Subscribe.astro';
+import Subscribe from "../components/blogpage/Subscribe.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -41,33 +41,43 @@ import { ArrowLeft } from "@lucide/astro";
                 height={510}
                 src={heroImage}
                 alt=""
+                format="webp"
+                quality={100}
                 class="aspect-2/1 object-cover w-full! h-auto max-w-7xl rounded-2xl"
               />
             )
           }
         </div>
-		<div class="flex flex-wrap gap-4 justify-between items-center mb-10 mt-4">
-			<a href="../" class="flex gap-2 items-centermt-8 order-2 md:order-1"> <ArrowLeft /> Back to Blog</a>
-		 <div class="mt-auto grid grid-cols-[44px_1fr] gap-3 items-center order-1 md:order-2">
-          <div class="rounded-full overflow-hidden bg-main text-white mv">
-            <img src="/img/logo-icon.svg" alt="" class="object-cover w-full" />
-          </div>
-          <div>
-            <b>Team Zeepay</b>
-            <p class="text-sm text-custom-grey-100 my-1!">
-              Category: {category}
-            </p>
+        <div
+          class="flex flex-wrap gap-4 justify-between items-center mb-10 mt-4"
+        >
+          <a href="../" class="flex gap-2 items-centermt-8 order-2 md:order-1">
+            <ArrowLeft /> Back to Blog</a
+          >
+          <div
+            class="mt-auto grid grid-cols-[44px_1fr] gap-3 items-center order-1 md:order-2"
+          >
+            <div class="rounded-full overflow-hidden bg-main text-white mv">
+              <img
+                src="/img/logo-icon.svg"
+                alt=""
+                class="object-cover w-full"
+              />
+            </div>
+            <div>
+              <b>Team Zeepay</b>
+              <p class="text-sm text-custom-grey-100 my-1!">
+                Category: {category}
+              </p>
+            </div>
           </div>
         </div>
-		</div>
-       
-
       </div>
       <div class="max-w-4xl mx-auto">
         <slot />
 
         <a href="../" class="btn mt-8"> <ArrowLeft /> Back to Blog</a>
-		<Subscribe>
+        <Subscribe />
       </div>
     </article>
   </div>

@@ -17,14 +17,10 @@ const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const subpath = pathname.match(/[^/]+/g);
 
 const isActive =
-  item.href === pathname ||
-  item.href === "/" + (subpath?.[0] || "");
+  item.href === pathname || item.href === "/" + (subpath?.[0] || "");
 ---
 
-<a
-  href={item.href}
-  class:list={[className, { active: isActive }]}
->
+<a href={item.href} class:list={[className, { active: isActive }]}>
   {item.name}
 </a>
 
@@ -36,6 +32,6 @@ const isActive =
 
   a.active {
     font-weight: 600;
-    color: var( --color-main);
+    color: var(--color-custom-blue-400);
   }
 </style>

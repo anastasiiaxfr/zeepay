@@ -9,8 +9,9 @@
   --color-custom-blue-100: #ebf1ff;
   --color-custom-blue-200: #2667ff;
   --color-custom-blue-300: #001a57;
+  --color-custom-blue-400: #2662F3;
   --color-custom-light-100: #f8fafc;
-  --color-custom-grey-100: #64748b;
+  --color-custom-grey-100: #5D6F8D;
 }
 
 @layer base {

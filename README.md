@@ -13,7 +13,7 @@ This template is powered by a modern, headless stack: Astro, Tailwind, Daisy UI,
 ## Demo
 
 - ✨ [Live Demo](https://zeepay-lyart.vercel.app/)
-- 💨 [PageSpeed Insights Report](https://pagespeed.web.dev/analysis/https-zeepay-lyart-vercel-app/1q51dx21j5?form_factor=desktop)
+- 💨 [PageSpeed Insights Report](https://pagespeed.web.dev/analysis/http-zeepay-lyart-vercel-app/vs31q4foj2?form_factor=mobile)
 - [Sitemap.xml](https://zeepay-lyart.vercel.app/sitemap-index.xml)
 - [Robots.txt](https://zeepay-lyart.vercel.app/robots.txt)
 - [Schema.org validator](https://search.google.com/test/rich-results/result?id=3nVnmyjOUAPsCPLxHaiebg)
@@ -47,6 +47,11 @@ Pages:
 
 ![mobile](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/1.jpg)
 ![desktop](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/2.jpg)
+
+## Open Graph Card
+
+![Facebook](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/5.jpg)
+![Telegram](https://github.com/anastasiiaxfr/zeepay/blob/main/public/theme/4.jpg)
 
 ## 🚀 Project Structure
 
