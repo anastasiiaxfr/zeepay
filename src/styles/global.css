@@ -76,7 +76,7 @@ body {
 }
 
 #reviewSwiper .swiper-slide {
-  opacity: 0.4;
+  opacity: 1;
   transform: scale(0.95);
   transition: all 0.3s ease;
 }

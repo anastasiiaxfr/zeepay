@@ -13,7 +13,7 @@ This template is powered by a modern, headless stack: Astro, Tailwind, Daisy UI,
 ## Demo
 
 - ✨ [Live Demo](https://zeepay-lyart.vercel.app/)
-- 💨 [PageSpeed Insights Report](https://pagespeed.web.dev/analysis/http-zeepay-lyart-vercel-app/vs31q4foj2?form_factor=mobile)
+- 💨 [PageSpeed Insights Report](https://pagespeed.web.dev/analysis/https-zeepay-lyart-vercel-app/wi2qhlzdsr?form_factor=desktop)
 - [Sitemap.xml](https://zeepay-lyart.vercel.app/sitemap-index.xml)
 - [Robots.txt](https://zeepay-lyart.vercel.app/robots.txt)
 - [Schema.org validator](https://search.google.com/test/rich-results/result?id=3nVnmyjOUAPsCPLxHaiebg)
@@ -21,7 +21,7 @@ This template is powered by a modern, headless stack: Astro, Tailwind, Daisy UI,
 Features:
 
 - ✅ Minimal styling (make it your own!)
-- ✅ 90+/100 Lighthouse performance
+- ✅ 99+/100 Lighthouse performance
 - ✅ SEO-friendly with canonical URLs and meta tags, Open Graph data, JSON-LD schema and PWA
 - ✅ Sitemap, robots.txt support
 - ✅ Markdown & MDX support
