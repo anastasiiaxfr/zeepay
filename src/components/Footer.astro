@@ -3,7 +3,9 @@ const today = new Date();
 import Logo from "./Logo.astro";
 ---
 
-<footer class="footer flex-col w-full text-custom-grey-100 gap-y-0 gap-x-10">
+<footer
+  class="footer flex-col w-full text-custom-grey-100 gap-y-0 gap-x-10 bg-white text-black"
+>
   <div class="footer-top w-full pt-15 pb-10">
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10">
@@ -56,7 +58,7 @@ import Logo from "./Logo.astro";
     </div>
   </div>
   <div class="footer-btm py-8 w-full">
-    <div class="container border-t border-base-300 pt-8">
+    <div class="container border-t border-base-300 dark:border-black/10 pt-8">
       <div class="flex flex-wrap items-center justify-between gap-4">
         <nav class="flex flex-wrap items-center gap-x-4 gap-y-2">
           <a href="/policy" class="hover:underline">Privacy Policy</a>

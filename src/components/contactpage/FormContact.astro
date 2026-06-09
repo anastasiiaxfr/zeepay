@@ -5,8 +5,8 @@ import { Smartphone, Mail, UserRound, ChevronRight } from "@lucide/astro";
 <form action="/" class="form" method="POST">
   <div class="grid gap-4 my-0 grid-cols-1 md:grid-cols-2">
     <fieldset class="fieldset">
-      <legend class="fieldset-legend">Full Name</legend>
-      <label class="input validator w-full">
+      <legend class="fieldset-legend dark:text-black">Full Name</legend>
+      <label class="input validator w-full bg-white dark:border-black/20">
         <UserRound />
 
         <input
@@ -27,8 +27,10 @@ import { Smartphone, Mail, UserRound, ChevronRight } from "@lucide/astro";
       </p>
     </fieldset>
     <fieldset class="fieldset">
-      <legend class="fieldset-legend">Email</legend>
-      <label class="input validator join-item w-full">
+      <legend class="fieldset-legend dark:text-black">Email</legend>
+      <label
+        class="input validator join-item w-full bg-white dark:border-black/20"
+      >
         <Mail />
         <input
           type="email"
@@ -43,8 +45,8 @@ import { Smartphone, Mail, UserRound, ChevronRight } from "@lucide/astro";
   </div>
   <div class="grid gap-4 my-0 grid-cols-1 md:grid-cols-2">
     <fieldset class="fieldset">
-      <legend class="fieldset-legend">Phone Number</legend>
-      <label class="input validator w-full">
+      <legend class="fieldset-legend dark:text-black">Phone Number</legend>
+      <label class="input validator w-full bg-white dark:border-black/20">
         <Smartphone />
         <input
           type="tel"
@@ -63,10 +65,10 @@ import { Smartphone, Mail, UserRound, ChevronRight } from "@lucide/astro";
     </fieldset>
 
     <fieldset class="fieldset">
-      <legend class="fieldset-legend">Subject</legend>
+      <legend class="fieldset-legend dark:text-black">Subject</legend>
       <input
         type="text"
-        class="input w-full"
+        class="input w-full bg-white dark:border-black/20"
         placeholder="Enter your subject"
         name="contact_subject"
         id="contact-subject"
@@ -77,9 +79,9 @@ import { Smartphone, Mail, UserRound, ChevronRight } from "@lucide/astro";
 
   <div class="my-0">
     <fieldset class="fieldset">
-      <legend class="fieldset-legend">Message</legend>
+      <legend class="fieldset-legend dark:text-black">Message</legend>
       <textarea
-        class="textarea h-24 w-full"
+        class="textarea h-24 w-full bg-white dark:border-black/20"
         placeholder="Type your message...."
         required
         name="contact_msg"

@@ -13,21 +13,24 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   <head>
     <SEO title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="bg-white text-black">
     <div class="drawer min-h-screen">
-      <input id="my-drawer-2" type="checkbox" class="drawer-toggle"  title="Toggle navigation menu"/>  <label for="my-drawer-2" class="sr-only">
-    Toggle navigation menu
-  </label>
+      <input
+        id="my-drawer-2"
+        type="checkbox"
+        class="drawer-toggle"
+        title="Toggle navigation menu"
+      />
+      <label for="my-drawer-2" class="sr-only"> Toggle navigation menu </label>
       <div class="drawer-content flex flex-col min-h-screen">
-       <main class="min-h-screen">
-         <Header />
-        <slot />
-       </main>
+        <main class="min-h-screen">
+          <Header />
+          <slot />
+        </main>
         <Footer />
         <SVG />
       </div>
       <Drawer />
     </div>
-
   </body>
 </html>

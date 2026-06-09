@@ -102,11 +102,11 @@ body {
 }
 
 .tab-active {
-  @apply bg-main text-white rounded-full;
+  @apply bg-main text-white! rounded-full;
 }
 
 .tab {
-  @apply px-6 py-3 h-auto;
+  @apply px-6 py-3 h-auto dark:text-black;
 }
 
 .validator-hint {
